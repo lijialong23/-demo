@@ -1,10 +1,2 @@
-{这里gulp安装的是3.9.1版本，4.0以后的版本写法上有部分不同}
 
-
-gulp前端自动化构建工具
-首先安装node
-安装gulp     npm install gulp -g(全局安装)
-npm init 生成pack.json
-npm install gulp --save-dev(局部安装)
-(注意全局安装的gulp和局部安装的gulp 版本要相同 否则会提示出错：TypeError: Cannot read property 'apply' of undefined)
 
