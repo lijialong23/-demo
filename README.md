@@ -5,3 +5,6 @@
 teacher 下面是js的上下左右的手势滑动
 
 gulpfile.js是gulp的自动化构建工具
+
+
+我是新加入的成员
