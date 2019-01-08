@@ -1,0 +1,68 @@
+git  常用技巧
+
+1.git  clone [url]拉去项目
+
+2.git status查看更改文件
+
+3.git add .     提交更改文件到暂存区
+
+4. git commit -m 'message' 提交备注
+
+5. git pull 提交前拉去最新库
+
+{如果有冲突，解决冲突，再重复2，3，4}
+
+6. git push 推送到远程
+
+
+
+常见冲突
+
+<<<<<<<<<
+	<div><p><img src=888.png></p></div>...【这一部分代码块是自己的】
+==========
+	<div><p><img src=888.png></p></div>...【这一部分代码块是远程的】
+>>>>>>>>>
+对自己的代码块和远程的代码块进行取舍
+在进行上面2，3，4，6操作
+
+
+
+
+常见问题
+
+	若是git bash 突然弹出淡绿色的字体且不能进行编辑，说明git自行对代码进行合并；
+	然后按‘ESC'键，输入’:wq‘，按回车，即可。
+
+
+
+
+常用操作
+
+
+     放弃修改或删除
+	
+	1.   没有到git add .时：
+			用git checkout --filename
+			若是放弃所有修改用 git checkout .
+	2.   若用到了git add .时：
+			用git reset HEAD 文件名（filename）
+			若是放弃所有修改用 git reset HEAD .  
+			然后再使用第  1  步
+	3   若用到了 git commit -m ''时：
+			可用 git reset --hard HEAD^即可。
+
+     回滚版本
+	1. 使用git log 查看提交历史
+	2. 使用git reset --hard commitid【其中commitid为log查询中的第一行字符串】
+
+
+     创建分支
+	1. 创建分支 git branch 分支名
+	2. 切换分支 git checkout 分支名【可用快捷指令：创建+切换：git checkout -b 分支名】
+	3. 在分支下写代码，然后执行 git status，git add .，git commit -m，
+	4. 切换到master     git    checkout    master【此时在分支上新增或者修改的代码全部都看不到】
+	5. git pull 拉去最新远程
+	6. 合并分支 git merge 分支名
+	7. 若产生冲突：查看冲突文件，解决冲突
+	8. 再次git status，git add .，git commit -m，git push。
