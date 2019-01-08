@@ -13,5 +13,9 @@ gulpfile.js是gulp的自动化构建工具大幅度反对反对
 
 我鱼胆汤清又来一行：my hero is my self
 
+<<<<<<< HEAD
 nidayede 我是洪金宝
+=======
+nidayede 我是李佳隆
+>>>>>>> 3b3bff4dc1bc175f1cb72b30237e16b2fd9b22ee
 
